@@ -1,0 +1,147 @@
+.post:hover{
+    background-color: rgb(12, 12, 12);
+    transition: 0.2s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    .post {
+        padding: 10px;
+        margin: 10px  50px;
+        
+        border-radius: 10px;
+     
+        
+    }
+
+    .postHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .profilePicture {
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        border-radius: 20%;
+    }
+
+    .bullet {
+        margin: 0 4px;
+
+        color: #555;
+
+    }
+    .userDetails{
+        font-weight: 200;
+        color: rgb(211, 213, 213);
+    }
+
+    .date {
+        font-size: 0.875rem;
+        color: #a09b9b;
+    }
+
+    .postContent {
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+
+    .postTitle {
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        font-weight: 300;
+    }
+
+    .postImage {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .postDescription {
+        font-size: 14px;
+        color: grey;
+        font-weight: 200;
+    }
+
+
+    .showMoreButton {
+        font-size: 0.75rem;
+        color: #3479c9;
+    }
+
+}
+@media (max-width: 768px) {
+    .post {
+        padding-left: 10px;
+        margin: 5px 5px 0px 10px;
+     
+        
+    }
+
+    .postHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .profilePicture {
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        border-radius: 20%;
+    }
+
+    .bullet {
+        margin: 0 4px;
+
+        color: #555;
+
+    }
+    .userDetails{
+        font-weight: 200;
+        color: rgb(211, 213, 213);
+    }
+
+    .date {
+        font-size: 0.875rem;
+        color: #a09b9b;
+    }
+
+    .postContent {
+        margin-left: 35px;
+        margin-top: 5px;
+    }
+
+    .postTitle {
+        font-size: 18px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+        font-weight: 300;
+    }
+
+    .postImage {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .postDescription {
+        font-size: 14px;
+        color: grey;
+        font-weight: 200;
+    }
+
+
+    .showMoreButton {
+        font-size: 0.75rem;
+        color: #3479c9;
+    }
+
+}

@@ -1,0 +1,201 @@
+@media (max-width:1200px) {
+    .startBullet{
+       
+        display: flex;
+        color: grey;
+        padding-bottom: 0;
+        font-size:12px;
+
+    }
+    .postActions {
+        padding-left: 73px;
+       padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 9px;
+        border-bottom: 1px solid #848282;
+
+    }
+
+    .actionButton {
+        
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        color: #333;
+        padding-bottom: 5px;
+
+        background: none;
+       
+        cursor: pointer;
+        
+       
+        
+        margin-bottom: 2px;
+        padding: 5px;
+        transition: background-color 0.3s;
+
+
+    }
+
+    .post-container {
+        position: relative;
+    }
+
+    .post-container {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        border-left: 2px dotted #ccc;
+       
+    }
+    .likes .dislikes{
+        color: purple;
+    }
+
+   
+    
+    .filledButton {
+        
+        color: #7500f3;
+    }
+    
+    .separator {
+        margin: 0 8px;
+        color: #555;
+    }
+    
+    .commentSection {
+        margin-top: 10px;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        background: transparent;
+    }
+    
+    .commentTextarea {
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    
+    .postCommentButton {
+        background-color: #0070f3;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+}
+
+@media (max-width:768px) {
+    .startBullet{
+       
+        display: flex;
+        color: grey;
+        padding-bottom: 0;
+        font-size:12px;
+
+    }
+    .postActions {
+        padding-left: 32px;
+       padding-bottom: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 9px;
+        border-bottom: 1px solid #848282;
+
+    }
+
+    .actionButton {
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+        color: #333;
+        padding-bottom: 5px;
+
+        background: none;
+       
+        cursor: pointer;
+        
+       
+        
+        margin-bottom: 2px;
+        padding: 5px;
+        transition: background-color 0.3s;
+
+
+    }
+
+    .post-container {
+        position: relative;
+    }
+
+    .post-container {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        border-left: 2px dotted #ccc;
+       
+    }
+    .likes .dislikes{
+        color: purple;
+    }
+
+   
+    
+    .filledButton {
+        
+        color: #7500f3;
+    }
+    
+    .separator {
+        margin: 0 8px;
+        color: #555;
+    }
+    
+    .commentSection {
+        margin-top: 10px;
+        padding: 10px;
+        border-top: 1px solid #ddd;
+        background: transparent;
+    }
+    
+    .commentTextarea {
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    
+    .postCommentButton {
+        background-color: #0070f3;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+}

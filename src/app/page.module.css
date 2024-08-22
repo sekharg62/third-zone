@@ -1,0 +1,56 @@
+.app {
+  display: flex;
+  justify-content: center; /* Center the entire content */
+  margin: 0 auto; /* Center the .app container */
+}
+
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  flex-shrink: 0; /* Prevent shrinking of the sidebar */
+}
+
+.content {
+  width: calc(100% - 300px); /* Subtract sidebar width and some margin */
+  max-width: 750px; /* Fixed maximum width for content */
+  margin-left: 40px; /* Space between sidebar and content */
+  flex-grow: 1; /* Allow content to grow */
+}
+.content.sidebar-hidden {
+  margin-left: 0;
+  
+}
+
+.post {
+  flex: 1;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  
+  scrollbar-width: none;
+}
+
+@media (max-width: 1200px) {
+  .app {
+    padding: 0 20px 0 10px; /* Optional: Padding for smaller screens */
+  }
+
+  .sidebar {
+    width: 250px; /* Keep sidebar width fixed */
+  }
+
+  .content {
+    width: calc(100% - 290px); /* Adjust width considering sidebar and margin */
+    max-width: 750px;
+    margin-left: 40px; /* Keep margin between sidebar and content */
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    
+    margin-left: 0;
+  }
+}
