@@ -1,5 +1,5 @@
 import React from "react";
-import PostContainer from "./pages/post/page";
+import PostContainer from "./pages/post";
 import Sidebar from "@/components/SideBar/SideBar";
 import styles from './page.module.css'
 
