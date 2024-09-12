@@ -20,9 +20,7 @@ const Sidebar = () => {
   
   
   return (
-    <div>
-      
-      
+    <div className={styles.sidebar}>
         {navItems.map((item, index) => (
           <a href={item.link} key={index} className={styles.navItem}>
             {item.icon}

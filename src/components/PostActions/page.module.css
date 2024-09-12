@@ -1,10 +1,10 @@
-@media (max-width:1200px) {
+
     .startBullet{
        
         display: flex;
         color: grey;
-        padding-bottom: 0;
         font-size:12px;
+        margin-right: 5px;
 
     }
     .postActions {
@@ -15,6 +15,7 @@
         flex-direction: row;
         gap: 9px;
         border-bottom: 1px solid #848282;
+        
 
     }
 
@@ -97,7 +98,7 @@
         cursor: pointer;
     }
     
-}
+
 
 @media (max-width:768px) {
     .startBullet{
@@ -196,6 +197,19 @@
         border: none;
         border-radius: 3px;
         cursor: pointer;
+    }
+    
+}
+@media (max-width:480px) {
+    .startBullet{
+       
+        display: flex;
+        color: grey;
+        padding-bottom: 0;
+        font-size:12px;
+    }
+    .postActions {
+        padding-left: 12px;
     }
     
 }

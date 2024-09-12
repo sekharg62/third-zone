@@ -29,6 +29,7 @@ const App = () => {
       },
       date: '16 Aug',
       title: 'Do you have any next big idea?',
+      image: 'https://images.pexels.com/photos/27847621/pexels-photo-27847621/free-photo-of-black-and-white-photo-of-birds-flying-over-a-bridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       description:
         'I got something which is not that better. Write about your ideas in the discussion and we will feature one big idea every day!',
       likes: 2,
@@ -59,11 +60,10 @@ const App = () => {
       <div className={styles.sidebar}>
         <Sidebar />
       </div>
-
       <div className={styles.content}>
         {posts.map((post, index) => (
 
-          <PostContainer key={index} {...post} className={styles.post} />
+          <PostContainer key={index} {...post} className={styles.posts} />
         ))}
       </div>
 

@@ -1,6 +1,6 @@
 /* Default Sidebar Styling */
 .sidebar {
-    width: 250px;
+  
     height: 100vh;
     padding: 20px;
     display: flex;
@@ -32,7 +32,7 @@
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    
+
     text-decoration: none;
     font-size: 18px;
     border-radius: 5px;
@@ -45,10 +45,11 @@
   
   .span {
     margin-left: 10px;
+    
   }
   @media (max-width:1200px) {
     .sidebar{
-      width: 180px;
+      
     height: 100vh;
     padding: 15px;
     position: fixed;

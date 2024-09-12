@@ -27,7 +27,7 @@ const PostActions = ({ likes, dislikes, comments, shares }) => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <div className={styles.postActions}>
                 <FaSquare className={styles.startBullet} />
                 <button className={`${styles.actionButton} ${liked ? styles.filledButton : ''}`} onClick={handleLike}>

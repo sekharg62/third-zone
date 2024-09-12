@@ -1,23 +1,46 @@
 .container {
-
+ 
   position: relative;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Arrange children vertically */
+   /* Center children vertically */
   
+  padding: 20px; /* Add some padding around the content */
 }
 
 .container::before {
   content: "";
   position: absolute;
-  top: 50px;
-  left: 78px;
-  bottom: 27px;
-  width: 1px;
-
-  border-left: 2px dotted #626262;
+  top: 85px;
+  left: 97px;
+  bottom: 54px;
+  width: 2px;
+  border-left: 3px dotted #626262;
 }
 
-@media (max-width:768px) {
+
+@media (max-width: 768px) {
   .container::before {
     left: 37px;
   }
-
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 85px;
+    left: 56px;
+    bottom: 54px;
+    width: 2px;
+    border-left: 3px dotted #626262;
+  }
+}
+@media (max-width:480px) {
+  
+  .container{
+    padding: 0px;
+  }
+  .container::before {
+    left: 16px;
+    top: 55px;
+    bottom: 30px;
+  }
 }
