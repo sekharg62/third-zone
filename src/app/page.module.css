@@ -4,29 +4,43 @@
   align-items: flex-start; /* Align items to the top */
   height: 100vh; /* Full height for proper centering */
   padding: 0 20px; /* Padding around the edges */
-  
+  margin-bottom: 50px; /* Space for footer on mobile screens */
 }
 
 .sidebar {
-  /* Fixed width for sidebar */
   margin-right: 20px; /* Space between sidebar and content */
-  
   flex-shrink: 0; /* Prevent shrinking */
   position: relative; /* Relative positioning for sidebar */
 }
 
 .content {
   flex-grow: 1; /* Allow content to take up remaining space */
-  
   max-width: 800px; /* Limit max width for centered content */
   width: 100%; /* Full width to center */
   margin: 0 auto; /* Center content horizontally */
   padding: 20px; /* Padding around content */
-   /* Optional background color */
   border-radius: 8px; /* Optional border radius */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
   overflow-y: auto; /* Allow scrolling if content overflows */
 }
+
+.pageHead {
+  color: white;
+  height: 55px;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  
+    color: white;
+    margin: 0;
+    padding: 0;
+    
+    line-height: 55px;
+  
+}
+
 
 
 
@@ -35,22 +49,44 @@
     flex-direction: column; /* Stack sidebar and content vertically on smaller screens */
     align-items: center; /* Center align items */
     padding: 0; /* Remove side padding */
+    margin-bottom: 50px; /* Add space for navFooter */
   }
 
   .sidebar {
     width: 100%; /* Full width for sidebar on small screens */
     margin-right: 0; /* Remove right margin */
     margin-bottom: 20px; /* Space between sidebar and content */
-    
   }
 
   .content {
     max-width: 100%; /* Full width content for smaller screens */
     padding: 10px; /* Adjust padding for mobile */
-   
   }
+
+
+}
+.navFooter {
+  display: none; /* Hide by default for larger screens */
+  position: fixed; /* Fix at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0); /* Background color */
+  height: 50px;
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-around; /* Space icons evenly */
+  align-items: center; /* Center icons vertically */
+  z-index: 1000; /* Ensure it's above other content */
 }
 
+.navFooter svg {
+  color: rgb(135, 0, 173); /* Icon color */
+ height: 25px;
+}
 
-
-
+@media (max-width: 768px) {
+  .navFooter {
+    display: flex; /* Show footer on smaller screens */
+  }
+  
+}

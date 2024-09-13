@@ -2,6 +2,9 @@ import React from "react";
 import PostContainer from "./pages/post";
 import Sidebar from "@/components/SideBar/SideBar";
 import styles from './page.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faSearch, faPlusCircle, faHome } from '@fortawesome/free-solid-svg-icons';
+
 
 const App = () => {
   const posts = [
@@ -56,18 +59,28 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-
       <div className={styles.sidebar}>
         <Sidebar />
       </div>
       <div className={styles.content}>
-        {posts.map((post, index) => (
+        <div className={styles.pageHead}>
+          <h1 >Third Zone</h1>
+        </div>
 
+        {posts.map((post, index) => (
           <PostContainer key={index} {...post} className={styles.posts} />
         ))}
       </div>
+      {/* Footer with icons for mobile and tablet screens */}
+      <div className={styles.navFooter}>
+        <FontAwesomeIcon className={styles.icon} icon={faUser} /> {/* Profile Icon */}
+        <FontAwesomeIcon icon={faSearch} /> {/* Search Icon */}
+        <FontAwesomeIcon icon={faPlusCircle} /> {/* Create Icon */}
+        <FontAwesomeIcon icon={faHome} /> {/* Home Icon */}
+      </div>
 
     </div>
+
   );
 };
 

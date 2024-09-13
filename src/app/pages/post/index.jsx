@@ -6,6 +6,7 @@ import styles from './page.module.css'
 const PostContainer = ({ user, date, title, image, description, likes, dislikes, comments, shares }) => {
     return (
         <div className={styles.container}>
+            
           
             
                 <Post
