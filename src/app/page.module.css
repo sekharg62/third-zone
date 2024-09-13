@@ -89,3 +89,16 @@
     display: flex; /* Show footer on smaller screens */
   }
 }
+@media (max-width:480px) {
+  .app{
+    padding: 0 10px; /* Adjust padding for mobile */
+    margin-bottom: 0px; /* Remove space for navFooter */
+    height: 100%; /* Full height for proper centering */
+    flex-direction: column; /* Stack sidebar and content vertically on smaller screens */
+    align-items: center; /* Center align items */
+    padding: 0; /* Remove side padding */
+    margin-bottom: 50px; /* Add space for navFooter */
+
+  }
+  
+}

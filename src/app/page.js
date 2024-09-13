@@ -1,11 +1,18 @@
+'use client'
 import React from "react";
-import PostContainer from "./pages/post";
+import { useRouter } from 'next/navigation';
+import PostContainer from "./post";
 import Sidebar from "@/components/SideBar/SideBar";
 import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSearch, faPlusCircle, faHome, faBell } from '@fortawesome/free-solid-svg-icons'; // Import faBell for notification icon
 
 const App = () => {
+  const router = useRouter(); // Initialize router
+
+  const handleNavigation = (path) => {
+    router.push(path); // Navigate to the specified path
+  };
   const posts = [
     {
       user: {
@@ -63,7 +70,7 @@ const App = () => {
         <div className={styles.pageHead}>
           <h1>Third Zone</h1>
           {/* Add Notification Icon */}
-          <FontAwesomeIcon icon={faBell} className={styles.icon} />
+          <FontAwesomeIcon icon={faBell} className={styles.icon} onClick={() => handleNavigation('/notification')} />
         </div>
 
         {posts.map((post, index) => (
@@ -72,10 +79,10 @@ const App = () => {
       </div>
       {/* Footer with icons for mobile and tablet screens */}
       <div className={styles.navFooter}>
-        <FontAwesomeIcon className={styles.icon} icon={faUser} /> {/* Profile Icon */}
-        <FontAwesomeIcon icon={faSearch} /> {/* Search Icon */}
-        <FontAwesomeIcon icon={faPlusCircle} /> {/* Create Icon */}
-        <FontAwesomeIcon icon={faHome} /> {/* Home Icon */}
+        <FontAwesomeIcon className={styles.icon} icon={faUser} onClick={() => handleNavigation('/profile')} /> {/* Profile Icon */}
+        <FontAwesomeIcon icon={faSearch}  className={styles.icon} onClick={() => handleNavigation('/search')} /> {/* Search Icon */}
+        <FontAwesomeIcon icon={faPlusCircle} onClick={() => handleNavigation('/create')} /> {/* Create Icon */}
+        <FontAwesomeIcon icon={faHome} onClick={() => handleNavigation('/')} /> {/* Home Icon */}
       </div>
     </div>
   );
