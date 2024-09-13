@@ -25,24 +25,46 @@
 }
 
 .pageHead {
-  color: white;
+  color: rgb(174, 17, 164);
   height: 55px;
   width: 100%;
   background: rgb(0, 0, 0);
   position: fixed;
   top: 0px;
   z-index: 1;
-  
-    color: white;
-    margin: 0;
-    padding: 0;
-    
-    line-height: 55px;
-  
+  display: flex; /* Align content horizontally */
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Space between title and notification icon */
+  padding: 0 40px 0 20px; /* Padding for left and right */
+  line-height: 55px;
 }
 
+.notificationIcon {
+  color: white; /* Notification icon color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
 
+.navFooter {
+  display: none; /* Hide by default for larger screens */
+  position: fixed; /* Fix at the bottom */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0); /* Background color */
+  height: 50px;
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-around; /* Space icons evenly */
+  align-items: center; /* Center icons vertically */
+  z-index: 1000; /* Ensure it's above other content */
+}
 
+.navFooter svg {
+  color: rgb(135, 0, 173); /* Icon color */
+  height: 25px;
+}
+.icon {
+  height: 25px;
+}
 
 @media (max-width: 768px) {
   .app {
@@ -63,30 +85,7 @@
     padding: 10px; /* Adjust padding for mobile */
   }
 
-
-}
-.navFooter {
-  display: none; /* Hide by default for larger screens */
-  position: fixed; /* Fix at the bottom */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgb(0, 0, 0); /* Background color */
-  height: 50px;
-  display: flex; /* Flexbox for alignment */
-  justify-content: space-around; /* Space icons evenly */
-  align-items: center; /* Center icons vertically */
-  z-index: 1000; /* Ensure it's above other content */
-}
-
-.navFooter svg {
-  color: rgb(135, 0, 173); /* Icon color */
- height: 25px;
-}
-
-@media (max-width: 768px) {
   .navFooter {
     display: flex; /* Show footer on smaller screens */
   }
-  
 }

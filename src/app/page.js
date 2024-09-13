@@ -3,8 +3,7 @@ import PostContainer from "./pages/post";
 import Sidebar from "@/components/SideBar/SideBar";
 import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSearch, faPlusCircle, faHome } from '@fortawesome/free-solid-svg-icons';
-
+import { faUser, faSearch, faPlusCircle, faHome, faBell } from '@fortawesome/free-solid-svg-icons'; // Import faBell for notification icon
 
 const App = () => {
   const posts = [
@@ -17,8 +16,7 @@ const App = () => {
       date: '16 Aug',
       title: "Let's talk about the black hole today.",
       image: 'https://images.pexels.com/photos/27847621/pexels-photo-27847621/free-photo-of-black-and-white-photo-of-birds-flying-over-a-bridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description:
-        'Black holes are invisible because they emit no light, but space telescopesack holes are invisible because they emit no light, but space telescopes with special instruments can help find them by observing the behavior of nearby stars and gas.',
+      description: 'Black holes are invisible because they emit no light, but space telescopesack holes are invisible because they emit no light, but space telescopes with special instruments can help find them by observing the behavior of nearby stars and gas.',
       likes: 1,
       dislikes: 5,
       comments: 9,
@@ -33,8 +31,7 @@ const App = () => {
       date: '16 Aug',
       title: 'Do you have any next big idea?',
       image: 'https://images.pexels.com/photos/27847621/pexels-photo-27847621/free-photo-of-black-and-white-photo-of-birds-flying-over-a-bridge.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      description:
-        'I got something which is not that better. Write about your ideas in the discussion and we will feature one big idea every day!',
+      description: 'I got something which is not that better. Write about your ideas in the discussion and we will feature one big idea every day!',
       likes: 2,
       dislikes: 4,
       comments: 3,
@@ -64,7 +61,9 @@ const App = () => {
       </div>
       <div className={styles.content}>
         <div className={styles.pageHead}>
-          <h1 >Third Zone</h1>
+          <h1>Third Zone</h1>
+          {/* Add Notification Icon */}
+          <FontAwesomeIcon icon={faBell} className={styles.icon} />
         </div>
 
         {posts.map((post, index) => (
@@ -78,9 +77,7 @@ const App = () => {
         <FontAwesomeIcon icon={faPlusCircle} /> {/* Create Icon */}
         <FontAwesomeIcon icon={faHome} /> {/* Home Icon */}
       </div>
-
     </div>
-
   );
 };
 
