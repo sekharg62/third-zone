@@ -10,9 +10,9 @@
 }
 
 .logoContainer {
-  box-sizing: :border-box;
-  display: flex;160px
-  bb
+  box-sizing:border-box;
+  display: flex;
+
   flex-direction: column;
   align-items: center;
   background-color: red;
