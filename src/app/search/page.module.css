@@ -1,3 +1,32 @@
-.head{
+.searchContainer {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    
+    text-align: center;
+    width: 100%;
+    
+  }
+  
+  .searchInput {
+    width: 100%;
     color: white;
-}
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    
+  }
+  
+  .searchButton {
+    display: none; /* Hide button for a minimal look */
+  }
+
+  
+  @media (max-width: 768px) {
+    /* Show search bar only on mobile screens */
+    .searchContainer {
+      display: block;
+    }
+  }
+  

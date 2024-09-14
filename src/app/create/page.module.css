@@ -1,3 +1,75 @@
-.head{
+.createPostContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
     color: white;
-}
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .inputField,
+  .textareaField,
+  .fileInput {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .textareaField {
+    height: 100px;
+    resize: none;
+  }
+  
+  .submitButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .imagePreview {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .previewImg {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+  }
+  
