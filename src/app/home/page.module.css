@@ -1,27 +1,27 @@
 .app {
-    display: flex; /* Use flexbox to align sidebar and content */
-    justify-content: center; /* Center the content container */
-    align-items: flex-start; /* Align items to the top */
-    height: 100vh; /* Full height for proper centering */
-    padding: 0 20px; /* Padding around the edges */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 0 20px;
     margin-bottom: 50px; /* Space for footer on mobile screens */
   }
   
   .sidebar {
-    margin-right: 20px; /* Space between sidebar and content */
-    flex-shrink: 0; /* Prevent shrinking */
-    position: relative; /* Relative positioning for sidebar */
+    margin-right: 20px;
+    flex-shrink: 0;
+    position: relative;
   }
   
   .content {
-    flex-grow: 1; /* Allow content to take up remaining space */
-    max-width: 800px; /* Limit max width for centered content */
-    width: 100%; /* Full width to center */
-    margin: 0 auto; /* Center content horizontally */
-    padding: 20px; /* Padding around content */
-    border-radius: 8px; /* Optional border radius */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-    overflow-y: auto; /* Allow scrolling if content overflows */
+    flex-grow: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
   }
   
   .pageHead {
@@ -32,74 +32,78 @@
     position: fixed;
     top: 0px;
     z-index: 1;
-    display: flex; /* Align content horizontally */
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Space between title and notification icon */
-    padding: 0 40px 0 20px; /* Padding for left and right */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px 0 20px;
     line-height: 55px;
   }
   
   .notificationIcon {
-    color: white; /* Notification icon color */
-    cursor: pointer; /* Pointer cursor on hover */
+    color: white;
+    cursor: pointer;
   }
   
   .navFooter {
-    display: none; /* Hide by default for larger screens */
-    position: fixed; /* Fix at the bottom */
+    display: none; /* Hide footer by default */
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(0, 0, 0); /* Background color */
+    background-color: rgb(0, 0, 0);
     height: 50px;
-    display: flex; /* Flexbox for alignment */
-    justify-content: space-around; /* Space icons evenly */
-    align-items: center; /* Center icons vertically */
-    z-index: 1000; /* Ensure it's above other content */
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
   }
   
   .navFooter svg {
-    color: rgb(135, 0, 173); /* Icon color */
+    color: rgb(135, 0, 173);
     height: 25px;
   }
+  
   .icon {
     height: 25px;
   }
   
+  /* Show navFooter only on smaller screens */
   @media (max-width: 768px) {
     .app {
-      flex-direction: column; /* Stack sidebar and content vertically on smaller screens */
-      align-items: center; /* Center align items */
-      padding: 0; /* Remove side padding */
-      margin-bottom: 50px; /* Add space for navFooter */
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 50px;
     }
   
     .sidebar {
-      width: 100%; /* Full width for sidebar on small screens */
-      margin-right: 0; /* Remove right margin */
-      margin-bottom: 20px; /* Space between sidebar and content */
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
     }
   
     .content {
-      max-width: 100%; /* Full width content for smaller screens */
-      padding: 10px; /* Adjust padding for mobile */
+      max-width: 100%;
+      padding: 10px;
     }
   
     .navFooter {
-      display: flex; /* Show footer on smaller screens */
+      display: flex; /* Display footer for tablet and smaller screens */
     }
   }
-  @media (max-width:480px) {
-    .app{
-      padding: 0 10px; /* Adjust padding for mobile */
-      margin-bottom: 0px; /* Remove space for navFooter */
-      height: 100%; /* Full height for proper centering */
-      flex-direction: column; /* Stack sidebar and content vertically on smaller screens */
-      align-items: center; /* Center align items */
-      padding: 0; /* Remove side padding */
-      margin-bottom: 50px; /* Add space for navFooter */
   
+  /* Further adjustments for mobile screens */
+  @media (max-width: 480px) {
+    .app {
+      padding: 0 10px;
+      margin-bottom: 50px;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
     }
-    
+  
+    .navFooter {
+      display: flex; /* Ensure footer is visible on mobile screens */
+    }
   }
   

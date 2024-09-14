@@ -5,10 +5,10 @@ import { FaHome, FaUser, FaCog, FaBell, FaEnvelope, FaChartPie, FaFileAlt, FaSig
 
 
 const navItems = [
-  { name: 'Home', icon: <FaHome />, link: '/dashboard/home' },
-  { name: 'Profile', icon: <FaUser />, link: '/dashboard/profile' },
+  { name: 'Home', icon: <FaHome />, link: '/home' },
+  { name: 'Profile', icon: <FaUser />, link: '/profile' },
   { name: 'Settings', icon: <FaCog />, link: '/dashboard/settings' },
-  { name: 'Notifications', icon: <FaBell />, link: '/dashboard/notifications' },
+  { name: 'Notifications', icon: <FaBell />, link: '/notification' },
   { name: 'Messages', icon: <FaEnvelope />, link: '/dashboard/messages' },
   { name: 'Analytics', icon: <FaChartPie />, link: '/dashboard/analytics' },
   { name: 'Reports', icon: <FaFileAlt />, link: '/dashboard/reports' },
