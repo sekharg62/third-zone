@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { useRouter } from 'next/navigation';
-import PostContainer from "@/app/post/page";
+import PostContainer from "@/components/PostContainer/PostContainer";
 import Sidebar from "@/components/SideBar/SideBar";
 import styles from './page.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
