@@ -10,31 +10,41 @@ const Post = ({ user, date, title, image, description }) => {
         setShowMore(!showMore);
     };
 
-    const isLongDescription = description.length > 150;
+    // Safely handle undefined or null description
+    const isLongDescription = description && description.length > 150;
 
     return (
         <div className={styles.post}>
             <div className={styles.postHeader}>
                 <div className={styles.profileContainer}>
-                    <Image
-                        src={user.profilePicture}
-                        alt="Profile Picture"
-                        width={50}
-                        height={50}
-                        className={styles.profilePicture}
-                    />
+                    {/* Safely check for user and profilePicture */}
+                    {user && user.profilePicture && (
+                        <Image
+                            src={user.profilePicture}
+                            alt="Profile Picture"
+                            width={50}
+                            height={50}
+                            className={styles.profilePicture}
+                        />
+                    )}
                 </div>
                 <div className={styles.userInfo}>
-                    <span className={styles.userName}>{user.name}</span>
-                    <span className={styles.bullet}>•</span>
-                    <span className={styles.userDetails}>{`@${user.username}`}</span>
-                    <span className={styles.bullet}>•</span>
-                    <span className={styles.date}>{date}</span>
+                    {user && (
+                        <>
+                            <span className={styles.userName}>{user.name}</span>
+                            <span className={styles.bullet}>•</span>
+                            <span className={styles.userDetails}>{`@${user.username}`}</span>
+                            <span className={styles.bullet}>•</span>
+                            <span className={styles.date}>{date}</span>
+                        </>
+                    )}
                 </div>
             </div>
 
             <div className={styles.postContent}>
                 <h3 className={styles.postTitle}>{title}</h3>
+
+                {/* Safely check for image */}
                 {image && (
                     <Image
                         src={image}
@@ -44,11 +54,17 @@ const Post = ({ user, date, title, image, description }) => {
                         className={styles.postImage}
                     />
                 )}
-                <p className={styles.postDescription}>
-                    {showMore || !isLongDescription
-                        ? description
-                        : `${description.slice(0, 150)}...`}
-                </p>
+
+                {/* Safely check for description */}
+                {description && (
+                    <p className={styles.postDescription}>
+                        {showMore || !isLongDescription
+                            ? description
+                            : `${description.slice(0, 150)}...`}
+                    </p>
+                )}
+
+                {/* Show "Show More" button if description is long */}
                 {isLongDescription && (
                     <button onClick={handleShowMore} className={styles.showMoreButton}>
                         {showMore ? 'Show Less' : 'Show More'}
